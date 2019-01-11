@@ -15,6 +15,8 @@ class ApplicationController < Sinatra::Base
     if !@user.nil?
       session[:id]=@user.id
       redirect("/account")
+    else
+      redirect("/login")
     end
   end
 
